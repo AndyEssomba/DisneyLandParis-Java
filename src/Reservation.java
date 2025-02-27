@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static src.Menu.reservationList;
@@ -22,19 +23,15 @@ public abstract class Reservation {
     protected src.ParkAccess parkAccess;
     String username;
 
-
-    //constructor
-
-    public Reservation(String username, LocalDate dateVisite,
-                       ParkAccess parkAccess) {
+    // Constructor
+    public Reservation(String username, LocalDate dateVisite, ParkAccess parkAccess) {
         this.username = username;
         this.reservationId++;
         this.dateVisite = dateVisite;
         this.parkAccess = parkAccess;
     }
 
-    //getter and setters
-
+    // Getters and setters
     public int getReservationId() {
         return reservationId;
     }
@@ -47,25 +44,9 @@ public abstract class Reservation {
         return accesCoupeFile;
     }
 
-    public void setAccesCoupeFile(LocalDate accesCoupeFile) {
-        this.accesCoupeFile = accesCoupeFile;
-    }
 
-    public double getPrice() {
-        return totalPrice;
-    }
-
-    // setter
     public void setPrice(double price) {
         this.totalPrice = price;
-    }
-
-    public ParkAccess getParkAccess() {
-        return parkAccess;
-    }
-
-    public void setParkAccess(ParkAccess parkAccess) {
-        this.parkAccess = parkAccess;
     }
 
     public LocalDate getDateVisite() {
@@ -76,10 +57,8 @@ public abstract class Reservation {
         this.dateVisite = dateVisite;
     }
 
-    //Methods
-
+    // Abstract method
     public abstract String getDetails();
-
 
     private static final String RESERVATIONS_FILE = "src/reservations.json";
 
@@ -88,7 +67,9 @@ public abstract class Reservation {
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .registerTypeAdapter(LocalDate.class,
-                        new UserStore.LocalDateAdapter()) // Register the type adapter
+                        new GsonAdapters.LocalDateAdapter())
+                .registerTypeAdapter(LocalDateTime.class,
+                        new GsonAdapters.LocalDateTimeAdapter()) // Add LocalDateTime adapter
                 .create();
         try (FileWriter writer = new FileWriter(RESERVATIONS_FILE)) {
             gson.toJson(reservationList, writer);
@@ -101,51 +82,27 @@ public abstract class Reservation {
     public static void loadReservationsFromJson() {
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(LocalDate.class,
-                        new UserStore.LocalDateAdapter()) // Register the type adapter
+                        new GsonAdapters.LocalDateAdapter())
+                .registerTypeAdapter(LocalDateTime.class,
+                        new GsonAdapters.LocalDateTimeAdapter()) // Add LocalDateTime adapter
                 .create();
-        Type reservationListType = new TypeToken<List<Reservation>>() {
-        }.getType();
+        Type reservationListType =
+                new TypeToken<List<Reservation>>() {}.getType();
 
         try (FileReader reader = new FileReader(RESERVATIONS_FILE)) {
-            // Read the file content into a string for validation
-            char[] buffer = new char[1024];
-            int readLength = reader.read(buffer);
-
-            if (readLength == -1) {
-                // File is empty: initialize an empty list and return
-                System.out.println("No reservations found. File is empty.");
-                reservationList.clear();
-                return;
-            }
-
-            String jsonContent = new String(buffer, 0, readLength).trim();
-
-            if (jsonContent.isEmpty()) {
-                System.out.println
-                        ("No reservations found. File contains no data.");
-                reservationList.clear();
-                return;
-            }
-
-            // Parse JSON safely
             List<Reservation> loadedReservations =
-                    gson.fromJson(jsonContent, reservationListType);
+                    gson.fromJson(reader, reservationListType);
             if (loadedReservations != null) {
                 reservationList.clear();
                 reservationList.addAll(loadedReservations);
             } else {
-                System.out.println("No reservations loaded. " +
-                        "File might be empty or invalid.");
+                System.out.println("No reservations loaded.");
             }
         } catch (IOException e) {
-            System.out.println(
-                    "No existing reservations found" +
-                            " or error accessing reservations file: "
-                            + e.getMessage());
+            System.out.println("Error accessing reservations file: "
+                    + e.getMessage());
         } catch (com.google.gson.JsonSyntaxException e) {
-            System.out.println("Error parsing reservations." +
-                    " Invalid JSON format: " + e.getMessage());
-            reservationList.clear(); // Reset the reservation list
+            System.out.println("Invalid JSON format: " + e.getMessage());
         }
     }
 }

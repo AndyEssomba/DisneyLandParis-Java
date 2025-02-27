@@ -33,6 +33,9 @@ public class AnnualPass extends Reservation {
     public void setLevel(Level level) {
         this.level = level;
     }
+    public double calculatePrice() {
+        return level.getDefaultPrice();
+    }
 
     @Override
     public String getDetails() {

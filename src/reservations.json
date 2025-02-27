@@ -1,43 +1,18 @@
 [
   {
     "dayNumber": 1,
-    "skipLines": [],
+    "skipLines": [
+      {
+        "accessTime": "2025-01-01 15:00:00",
+        "attraction": "grand 8",
+        "dayNumber": 1
+      }
+    ],
     "uniqueTicketId": 1,
     "reservationId": 1,
     "totalPrice": 0.0,
-    "dateVisite": "2025-01-18",
+    "dateVisite": "2025-01-01",
     "parkAccess": "DISNEYLAND",
     "username": "Andy"
-  },
-  {
-    "dayNumber": 1,
-    "skipLines": [],
-    "uniqueTicketId": 1,
-    "reservationId": 1,
-    "totalPrice": 0.0,
-    "dateVisite": "2025-07-14",
-    "parkAccess": "DISNEYLAND",
-    "username": "Andy"
-  },
-  {
-    "numberOfNights": 2,
-    "hotel": "MARVEL_HOTEL",
-    "roomType": "Standard",
-    "breakfast": false,
-    "ticket": {
-      "dayNumber": 1,
-      "skipLines": [],
-      "uniqueTicketId": 1,
-      "reservationId": 1,
-      "totalPrice": 0.0,
-      "dateVisite": "2025-01-16",
-      "parkAccess": "BOTH_PARKS",
-      "username": "Andy"
-    },
-    "reservationId": 1,
-    "totalPrice": 0.0,
-    "dateVisite": "2025-07-14",
-    "parkAccess": "BOTH_PARKS",
-    "username": "user05"
   }
 ]

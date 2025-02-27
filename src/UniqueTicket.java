@@ -62,6 +62,7 @@ public class UniqueTicket extends src.Reservation {
                 finalPrice += skipLine.calculatePriceSkip();
             }
         }
+        setPrice(finalPrice);
         return finalPrice;
     }
 
@@ -103,13 +104,21 @@ public class UniqueTicket extends src.Reservation {
                         LocalDate.of(2025, 2, 25)
                 }, // Vacances d'hiver
 
-                {LocalDate.of(2025, 4, 10), LocalDate.of(2025, 4, 25)}, // Vacances de printemps
+                {LocalDate.of(2025, 4, 10),
+                        LocalDate.of(2025, 4, 25)}, // Vacances de printemps
 
-                {LocalDate.of(2025, 7, 6), LocalDate.of(2025, 8, 31)},  // Grandes vacances
+                {LocalDate.of(2025, 7, 6),
+                        LocalDate.of(2025, 8, 31)},  // Grandes vacances
 
-                {LocalDate.of(2025, 10, 19), LocalDate.of(2025, 11, 3)}, // Toussaint
+                {LocalDate.of(2025, 10, 19),
+                        LocalDate.of(2025, 11, 3)}, // Toussaint
 
-                {LocalDate.of(2025, 12, 20), LocalDate.of(2026, 1, 5)}  // Noël
+                {LocalDate.of(2025, 12, 20),
+                        LocalDate.of(2026, 1, 5)},  // Noël
+
+                {LocalDate.of(2025, 12, 1),
+                        LocalDate.of(2025, 12, 10)}   // Czarine (exemple)
+                // Ajoutez d'autres périodes de vacances si nécessaire
         };
 
         for (LocalDate[] periode : vacancesScolaires) {
@@ -122,6 +131,7 @@ public class UniqueTicket extends src.Reservation {
 
         return false;
     }
+
 
 
     public String getDetails() {
