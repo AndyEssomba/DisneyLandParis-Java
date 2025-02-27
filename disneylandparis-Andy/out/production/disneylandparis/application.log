@@ -1,0 +1,66 @@
+2025-01-15T21:49:08.072560100 [INFO] Application Initialised
+2025-01-15T21:54:06.394045400 [INFO] Application Initialised
+2025-01-16T09:44:48.930069800 [INFO] Application Initialised
+2025-01-16T10:12:55.935197500 [INFO] Application Initialised
+2025-01-16T10:16:18.990755800 [INFO] Application Initialised
+2025-01-16T10:38:03.471269500 [INFO] Application Initialised
+2025-01-16T10:53:03.249432500 [INFO] Application Initialised
+2025-01-16T10:53:07.564463100 [INFO] Application Initialised
+2025-01-16T11:15:45.763182300 [INFO] Application Initialised
+2025-01-16T11:25:50.386057200 [INFO] Application Initialised
+2025-01-16T11:27:41.553721700 [INFO] Application Initialised
+2025-01-16T16:30:23.274629800 [INFO] Application Initialised
+2025-01-16T17:13:20.285929500 [INFO] Application Initialised
+2025-01-16T17:39:24.620739400 [ERROR] An error occurred: Cannot invoke "String.toUpperCase()" because the return value of "javax.swing.JOptionPane.showInputDialog(Object)" is null
+2025-01-16T17:39:38.219467900 [INFO] Application has been stopped.
+2025-01-16T17:41:08.785309 [ERROR] An error occurred: Cannot invoke "String.toUpperCase()" because the return value of "javax.swing.JOptionPane.showInputDialog(Object)" is null
+2025-01-16T17:41:16.239413700 [INFO] Application has been stopped.
+2025-01-16T17:41:37.578240600 [ERROR] An error occurred: Cannot invoke "String.toLowerCase()" because the return value of "javax.swing.JOptionPane.showInputDialog(java.awt.Component, Object, String, int)" is null
+2025-01-16T17:42:30.810909400 [ERROR] An error occurred: Cannot invoke "String.toUpperCase()" because the return value of "javax.swing.JOptionPane.showInputDialog(Object)" is null
+2025-01-16T17:42:34.604488 [INFO] Application has been stopped.
+2025-01-16T17:43:42.277732500 [INFO] Application has been stopped.
+2025-01-16T17:43:48.009810400 [INFO] Application Initialised
+2025-01-16T17:46:30.545522300 [ERROR] An error occurred: Cannot invoke "String.toUpperCase()" because the return value of "javax.swing.JOptionPane.showInputDialog(Object)" is null
+2025-01-16T17:46:35.039314100 [INFO] Application has been stopped.
+2025-01-16T17:47:43.590939800 [INFO] Application Initialised
+2025-01-16T17:48:20.693552800 [ERROR] An error occurred: Cannot invoke "String.toLowerCase()" because the return value of "javax.swing.JOptionPane.showInputDialog(java.awt.Component, Object, String, int)" is null
+2025-01-16T17:48:25.468178200 [INFO] Application has been stopped.
+2025-01-16T17:48:48.997454600 [INFO] Application Initialised
+2025-01-16T17:49:12.434504400 [INFO] Application has been stopped.
+2025-01-16T17:50:12.984933700 [INFO] Application Initialised
+2025-01-16T17:50:42.490180800 [INFO] User logged in successfully.
+2025-01-16T17:51:40.051854500 [ERROR] An error occurred: Cannot invoke "String.toLowerCase()" because the return value of "javax.swing.JOptionPane.showInputDialog(java.awt.Component, Object, String, int)" is null
+2025-01-16T17:51:47.479612100 [INFO] Application has been stopped.
+2025-01-16T17:54:08.688837700 [INFO] Application Initialised
+2025-01-16T17:56:31.022717100 [INFO] Application Initialised
+2025-01-16T17:58:33.782763400 [INFO] Application Initialised
+2025-01-16T18:01:19.854678400 [INFO] Application Initialised
+2025-01-16T18:10:15.923977700 [INFO] Application Initialised
+2025-01-16T18:25:21.539525800 [INFO] Application Initialised
+2025-01-16T18:42:46.736126400 [INFO] Application Initialised
+2025-01-16T18:55:13.590292100 [INFO] Application Initialised
+2025-01-16T19:06:52.153041300 [INFO] Application Initialised
+2025-01-16T19:09:35.334478900 [INFO] Application Initialised
+2025-01-16T19:13:18.159451100 [INFO] Application Initialised
+2025-01-16T19:16:03.225155500 [INFO] Application Initialised
+2025-01-16T19:30:21.976611 [INFO] Application Initialised
+2025-01-16T19:31:06.865476700 [INFO] Application Initialised
+2025-01-16T19:39:03.461029700 [INFO] Application Initialised
+2025-01-16T19:40:16.843685300 [INFO] Application Initialised
+2025-01-16T19:45:49.596033600 [INFO] Application Initialised
+2025-01-16T19:50:31.496903100 [INFO] Application Initialised
+2025-01-16T19:50:36.695883400 [INFO] Application Initialised
+2025-01-16T19:53:28.516633700 [INFO] Application Initialised
+2025-01-16T20:04:57.271553400 [INFO] Application Initialised
+2025-01-16T20:08:58.356447300 [INFO] Application Initialised
+2025-01-16T20:13:45.270655800 [INFO] Application Initialised
+2025-01-16T20:17:34.555913500 [INFO] Application Initialised
+2025-01-16T20:19:55.043886300 [INFO] Application Initialised
+2025-01-16T20:25:12.618360100 [INFO] Application Initialised
+2025-01-16T20:48:26.850899500 [INFO] Application Initialised
+2025-01-16T20:57:13.837544 [INFO] Application Initialised
+2025-01-16T21:07:01.663929500 [INFO] Application Initialised
+2025-01-16T21:36:22.860108 [INFO] Application Initialised
+2025-01-16T23:08:13.357384600 [INFO] Application Initialised
+2025-01-16T23:14:06.753517100 [INFO] Application Initialised
+2025-01-16T23:24:40.524590600 [INFO] Application Initialised
